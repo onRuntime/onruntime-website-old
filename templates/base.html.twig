@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="{{ app.request.locale }}">
+<head>
+    <!-- Required Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary Meta Tags -->
+    <title>{% block title %}onRuntime Studio{% endblock %}</title>
+    <meta name="description"
+          content="{% block description %}{% trans %}main.description{% endtrans %}{% endblock %}"/>
+    <meta name="keywords"
+          content="onruntime, runtime, studio, berrygames, netflixaddicts, rvby {% block keywords %}{% endblock %}"/>
+
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet"
+          href="//maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link rel="stylesheet" href="//cdn.onruntime.com/css/style.css"> {% block stylesheets_css %}{% endblock %}
+
+    <!-- Fonts -->
+    <link rel="stylesheet"
+          href="//fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap">
+    {% block stylesheets_fonts %}{% endblock %}
+
+    <!-- JS -->
+    {% block javascripts_top %}{% endblock %}
+</head>
+<body>
+<!-- navbar -->
+<nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand" href="#"><img src="//i.goopics.net/gDYgK.png" alt="Logo" height="70"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar"
+            aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="container">
+        <div class="collapse navbar-collapse" id="navbar">
+            <div class="navbar-nav mr-auto">
+                <a class="nav-item nav-link {% if 'home' in app.request.attributes.get('_route') %} active{% endif %}"
+                   href="{{ path('home', { '_locale':  app.request.locale }) }}">{% trans %}main.home{% endtrans %}</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link {% if 'products' in app.request.attributes.get('_route') %} active{% endif %}"
+                       href="#" id="navbarDropdownProducts" role="button" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false">
+                        {% trans %}main.ourproducts{% endtrans %}<i class="las la-angle-down"></i>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownProducts">
+                        <a class="dropdown-item"
+                           href="{{ path('products.show', { '_locale':  app.request.locale, 'key': 'berrygames' }) }}">BerryGames</a>
+                        <a class="dropdown-item" href="{{ path('products.show', { '_locale':  app.request.locale, 'key': 'netflixaddicts' }) }}">NetflixAddicts</a>
+                        <a class="dropdown-item" href="{{ path('products.show', { '_locale':  app.request.locale, 'key': 'rvby' }) }}">RVBY</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="{{ path('products.show', { '_locale':  app.request.locale, 'key': 'orion' }) }}">Orion</a>
+                    </div>
+                </li>
+                <a class="nav-item nav-link" href="#">{% trans %}main.pricing{% endtrans %}</a>
+
+            </div>
+            <div class="dropdown">
+                {% if key is defined %}
+                    <a class="nav-link" href="#" id="navbarDropdownLanguage" role="button" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false">
+                        {% trans %}main.locale.name{% endtrans %} <i class="las la-angle-down"></i>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownLanguage">
+                        <a class="dropdown-item"
+                           href="{{ path(app.request.attributes.get('_route'), { '_locale': 'en', 'key': key }) }}">English</a>
+                        <a class="dropdown-item"
+                           href="{{ path(app.request.attributes.get('_route'), { '_locale': 'fr', 'key': key }) }}">Français</a>
+                    </div>
+                {% else %}
+                    <a class="nav-link" href="#" id="navbarDropdownLanguage" role="button" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false">
+                        {% trans %}main.locale.name{% endtrans %} <i class="las la-angle-down"></i>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownLanguage">
+                        <a class="dropdown-item"
+                           href="{{ path(app.request.attributes.get('_route'), { '_locale': 'en' }) }}">English</a>
+                        <a class="dropdown-item"
+                           href="{{ path(app.request.attributes.get('_route'), { '_locale': 'fr' }) }}">Français</a>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</nav>
+<!-- /navbar -->
+
+<!-- content -->
+{% block content %}{% endblock %}
+<!-- /content -->
+
+<!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+{% block javascripts_bottom %}{% endblock %}
+</body>
+</html>

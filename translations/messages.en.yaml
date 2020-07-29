@@ -1,0 +1,29 @@
+main:
+  locale:
+    name: English
+    id: en
+  home: Home
+  ourproducts: Our Products
+  pricing: Pricing
+  description: onRuntime is a Franco-American studio that brings together teams of creators and develops applications, website and game platforms.
+  lang:
+    en: English
+    fr: Français
+  button:
+    website: Website
+home:
+  whoarewe: Who are we ?
+  contact:
+    emailorphone: Enter your email or your phone number
+    message: Type your message...
+    send: Send
+products:
+  berrygames:
+    title: BerryGames
+    description: BerryGames is a free Minecraft Mini Games server, come and discover Bedwars, Skywars and many more! Play for FREE in 1.8+!
+  netflixaddicts:
+    title: NetflixAddicts
+    description: To all fans of Netflix series and movies! Find opinions, advice and more on our site!
+  rvby:
+    title: RVBY
+    description: Online store RVBY

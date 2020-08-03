@@ -20,10 +20,13 @@ home:
 products:
   berrygames:
     title: BerryGames
-    description: BerryGames is a free Minecraft Mini Games server, come and discover Bedwars, Skywars and many more! Play for FREE in 1.8+!
+    description: BerryGames est un serveur Minecraft Mini Jeux gratuit, viens et découvre le Bedwars, Skywars et pleins d'autres! Jouez GRATUITEMENT en 1.8+!
   netflixaddicts:
     title: NetflixAddicts
     description: À tous les fan de séries et de films Netflix ! Retrouvez des avis, des conseils et plus sur notre site !
   rvby:
     title: RVBY
     description: Boutique en ligne RVBY
+  orion:
+    title: Orion
+    description: Chaine Youtube

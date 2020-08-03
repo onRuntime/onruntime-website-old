@@ -49,6 +49,8 @@ class ProductsController extends AbstractController
                 $link->twitter = 'https://twitter.com/rvbystore';
                 $link->img = 'https://rvby.store/img/prestashop-logo-1591269291.jpg';
                 break;
+            case 'orion':
+                $link->website = 'https://www.youtube.com/channel/UCN0hmDGaj1RAshd3A-x35pA';
             default:
                 break;
         }

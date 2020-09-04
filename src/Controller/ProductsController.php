@@ -39,15 +39,19 @@ class ProductsController extends AbstractController
                 $link->twitter = 'https://twitter.com/BerryGamesMC';
                 $link->img = 'https://cdn.berrygames.net/img/logo/logo.png';
                 break;
+            case 'instagram-dark':
+                $link->website = 'https://github.com/onRuntime/instagram-dark-extension/';
+                break;
             case 'netflixaddicts':
                 $link->website = 'https://netflixaddicts.fr';
                 $link->discord = 'https://discord.gg/Ju28ZBn';
-                $link->img = 'https://i.goopics.net/NGjky.png';
+                $link->img = 'https://cdn.onruntime.com/img/logo/logo-netflixaddicts.png';
                 break;
             case 'rvby':
                 $link->website = 'https://rvby.store';
                 $link->twitter = 'https://twitter.com/rvbystore';
-                $link->img = 'https://rvby.store/img/prestashop-logo-1591269291.jpg';
+                $link->instagram = 'https://instagram.com/rvbystore';
+                $link->img = 'https://cdn.onruntime.com/img/logo/logo-rvby.png';
                 break;
             case 'orion':
                 $link->website = 'https://www.youtube.com/channel/UCN0hmDGaj1RAshd3A-x35pA';

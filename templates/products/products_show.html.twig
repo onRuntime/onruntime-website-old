@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}{% trans %}main.ourproducts{% endtrans %} - onRuntime Studio{% endblock %}
+{% block title %}{{ trans.products.title }} - {% trans %}main.ourproducts{% endtrans %} - onRuntime Studio{% endblock %}
 
 {% block content %}
     <div class="content-wrapper">
@@ -20,12 +20,13 @@
                     {% if link.website is defined %}<a target="_blank" href="{{ link.website }}" class="btn">{% trans %}main.button.website{% endtrans %}</a>{% endif %}
                     {% if link.discord is defined %}<a target="_blank" href="{{ link.discord }}" class="btn btn-discord">Discord</a>{% endif %}
                     {% if link.twitter is defined %}<a target="_blank" href="{{ link.twitter }}" class="btn btn-twitter">Twitter</a>{% endif %}
+                    {% if link.instagram is defined %}<a target="_blank" href="{{ link.instagram }}" class="btn btn-instagram">Instagram</a>{% endif %}
                 </div>
             </div>
         </div>
 
         <div class="bg-wrapper">
-            {% if link.img is defined %}<img class="img-fluid" src="{{ link.img }}"></img>{% endif %}
+            {% if link.img is defined %}<img class="animate__animated animate__zoomInUp" src="{{ link.img }}"></img>{% endif %}
         </div>
     </div>
 {% endblock %}

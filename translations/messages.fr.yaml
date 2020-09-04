@@ -21,12 +21,15 @@ products:
   berrygames:
     title: BerryGames
     description: BerryGames est un serveur Minecraft Mini Jeux gratuit, viens et découvre le Bedwars, Skywars et pleins d'autres! Jouez GRATUITEMENT en 1.8+!
+  instagram-dark:
+    title: Instagram Dark
+    description: Instagram dark extension est une extension qui vise à changer le thème du site web Instagram et en faire un thème sombre comme l'application iOS lorsque le système est en mode sombre.
   netflixaddicts:
     title: NetflixAddicts
     description: À tous les fan de séries et de films Netflix ! Retrouvez des avis, des conseils et plus sur notre site !
   rvby:
     title: RVBY
-    description: Boutique en ligne RVBY
+    description: Visitez le site officiel RVBY pour retrouver nos hoodies et t-shirt ainsi que nos collections du moment, pour un style chic, élégant et épuré en toutes circonstances.
   orion:
     title: Orion
     description: Chaine Youtube

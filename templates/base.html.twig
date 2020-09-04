@@ -44,19 +44,19 @@
                 <a class="nav-item nav-link {% if 'home' in app.request.attributes.get('_route') %} active{% endif %}"
                    href="{{ path('home', { '_locale':  app.request.locale }) }}">{% trans %}main.home{% endtrans %}</a>
                 <li class="nav-item dropdown">
-                    <a class="nav-link {% if 'products' in app.request.attributes.get('_route') %} active{% endif %}"
+                    <a class="nav-link {% if 'projects' in app.request.attributes.get('_route') %} active{% endif %}"
                        href="#" id="navbarDropdownProducts" role="button" data-toggle="dropdown"
                        aria-haspopup="true" aria-expanded="false">
-                        {% trans %}main.ourproducts{% endtrans %}<i class="las la-angle-down"></i>
+                        {% trans %}main.ourprojects{% endtrans %}<i class="las la-angle-down"></i>
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownProducts">
                         <a class="dropdown-item"
-                           href="{{ path('products.show', { '_locale':  app.request.locale, 'key': 'berrygames' }) }}">BerryGames</a>
-                        <a class="dropdown-item" href="{{ path('products.show', { '_locale':  app.request.locale, 'key': 'instagram-dark' }) }}">Instagram Dark</a>
-                        <a class="dropdown-item" href="{{ path('products.show', { '_locale':  app.request.locale, 'key': 'netflixaddicts' }) }}">NetflixAddicts</a>
-                        <a class="dropdown-item" href="{{ path('products.show', { '_locale':  app.request.locale, 'key': 'rvby' }) }}">RVBY</a>
+                           href="{{ path('projects.show', { '_locale':  app.request.locale, 'key': 'berrygames' }) }}">BerryGames</a>
+                        <a class="dropdown-item" href="{{ path('projects.show', { '_locale':  app.request.locale, 'key': 'instagram-dark' }) }}">Instagram Dark</a>
+                        <a class="dropdown-item" href="{{ path('projects.show', { '_locale':  app.request.locale, 'key': 'netflixaddicts' }) }}">NetflixAddicts</a>
+                        <a class="dropdown-item" href="{{ path('projects.show', { '_locale':  app.request.locale, 'key': 'rvby' }) }}">RVBY</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="{{ path('products.show', { '_locale':  app.request.locale, 'key': 'orion' }) }}">Orion</a>
+                        <a class="dropdown-item" href="{{ path('projects.show', { '_locale':  app.request.locale, 'key': 'orion' }) }}">Orion</a>
                     </div>
                 </li>
                 <!--<a class="nav-item nav-link" href="#">{% trans %}main.pricing{% endtrans %}</a>-->

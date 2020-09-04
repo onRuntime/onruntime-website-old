@@ -3,7 +3,7 @@ main:
     name: English
     id: en
   home: Home
-  ourproducts: Our Products
+  ourprojects: Our Projects
   pricing: Pricing
   description: onRuntime is a Franco-American studio that brings together teams of creators and develops applications, website and game platforms.
   lang:
@@ -17,7 +17,7 @@ home:
     emailorphone: Enter your email or your phone number
     message: Type your message...
     send: Send
-products:
+projects:
   berrygames:
     title: BerryGames
     description: BerryGames is a free Minecraft Mini Games server, come and discover Bedwars, Skywars and many more! Play for FREE in 1.8+!

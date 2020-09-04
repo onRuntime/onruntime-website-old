@@ -10,7 +10,7 @@ use Symfony\Contracts\Translation\TranslatorInterface;
 class ProductsController extends AbstractController
 {
     /**
-     * @Route("/{_locale}/products/", name="products")
+     * @Route("/{_locale}/projects/", name="projects")
      * @return Response
      */
     public function products()
@@ -19,17 +19,17 @@ class ProductsController extends AbstractController
     }
 
     /**
-     * @Route("/{_locale}/products/{key}", name="products.show", defaults={"_locale"="en"}, requirements={"_locale"="en|fr"})
+     * @Route("/{_locale}/projects/{key}", name="projects.show", defaults={"_locale"="en"}, requirements={"_locale"="en|fr"})
      * @param null $key
      * @param TranslatorInterface $translator
      * @return Response
      */
-    public function products_show($key, TranslatorInterface $translator)
+    public function projects_show($key, TranslatorInterface $translator)
     {
         $trans = (object) null;
-        $trans->products = (object) null;
-        $trans->products->title = $translator->trans('products.'.$key.'.title');
-        $trans->products->description = $translator->trans('products.'.$key.'.description');
+        $trans->projects = (object) null;
+        $trans->projects->title = $translator->trans('projects.'.$key.'.title');
+        $trans->projects->description = $translator->trans('projects.'.$key.'.description');
 
         $link = (object) null;
         switch ($key) {
@@ -59,7 +59,7 @@ class ProductsController extends AbstractController
                 break;
         }
 
-        return $this->render('products/products_show.html.twig', [
+        return $this->render('projects/projects_show.html.twig', [
             'controller_name' => 'ProductsController',
             'key' => $key,
             'link' => $link,

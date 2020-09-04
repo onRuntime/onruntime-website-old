@@ -3,7 +3,7 @@ main:
     name: Français
     id: fr
   home: Accueil
-  ourproducts: Nos Produits
+  ourprojects: Nos Projets
   pricing: Prix
   description: onRuntime est un studio franco-américain qui rassemble des équipes de créateurs et développe des applications, des sites web et des plateformes de jeux.
   lang:

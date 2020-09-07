@@ -5,6 +5,7 @@ main:
   home: Home
   ourprojects: Our Projects
   pricing: Pricing
+  contact: Contact
   description: onRuntime is a Franco-American studio that brings together teams of creators and develops applications, website and game platforms.
   lang:
     en: English

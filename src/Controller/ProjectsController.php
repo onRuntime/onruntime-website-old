@@ -7,7 +7,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Contracts\Translation\TranslatorInterface;
 
-class ProductsController extends AbstractController
+class ProjectsController extends AbstractController
 {
     /**
      * @Route("/{_locale}/projects/", name="projects")
@@ -37,10 +37,11 @@ class ProductsController extends AbstractController
                 $link->website = 'https://berrygames.net';
                 $link->discord = 'https://discord.gg/9vedhPD';
                 $link->twitter = 'https://twitter.com/BerryGamesMC';
+                $link->instagram = 'https://instagram.com/berrygamesmc';
                 $link->img = 'https://cdn.berrygames.net/img/logo/logo.png';
                 break;
             case 'instagram-dark':
-                $link->website = 'https://github.com/onRuntime/instagram-dark-extension/';
+                $link->github = 'https://github.com/onRuntime/instagram-dark-extension/';
                 break;
             case 'netflixaddicts':
                 $link->website = 'https://netflixaddicts.fr';
@@ -60,7 +61,7 @@ class ProductsController extends AbstractController
         }
 
         return $this->render('projects/projects_show.html.twig', [
-            'controller_name' => 'ProductsController',
+            'controller_name' => 'ProjectsController',
             'key' => $key,
             'link' => $link,
             'trans' => $trans

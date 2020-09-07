@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}{{ trans.projects.title }} - {% trans %}main.ourprojects{% endtrans %} - onRuntime Studio{% endblock %}
+{% block title %}{{ trans.projects.title }} - {% trans %}main.ourprojects{% endtrans %} | onRuntime Studio{% endblock %}
 
 {% block content %}
     <div class="content-wrapper">
@@ -20,7 +20,8 @@
                     {% if link.website is defined %}<a target="_blank" href="{{ link.website }}" class="btn">{% trans %}main.button.website{% endtrans %}</a>{% endif %}
                     {% if link.discord is defined %}<a target="_blank" href="{{ link.discord }}" class="btn btn-discord">Discord</a>{% endif %}
                     {% if link.twitter is defined %}<a target="_blank" href="{{ link.twitter }}" class="btn btn-twitter">Twitter</a>{% endif %}
-                    {% if link.instagram is defined %}<a target="_blank" href="{{ link.instagram }}" class="btn btn-instagram">Instagram</a>{% endif %}
+                    {% if link.instagram is defined %}<a target="_blank" href="{{ link.instagram }}" class="btn btn-black">Instagram</a>{% endif %}
+                    {% if link.github is defined %}<a target="_blank" href="{{ link.github }}" class="btn btn-black">GitHub</a>{% endif %}
                 </div>
             </div>
         </div>

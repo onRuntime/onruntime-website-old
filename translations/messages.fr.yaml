@@ -13,7 +13,7 @@ main:
   button:
     website: Site web
 home:
-  whoarewe: Qui somme nous ?
+  whoarewe: Qui sommes nous ?
   contact:
     emailorphone: Entrez votre email ou votre téléphone
     message: Tapez votre message...
